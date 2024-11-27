@@ -1,0 +1,43 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  h1, h4 {
+    font-weight: bold;
+  }
+  
+  #createPostSection {
+    display: none; /* Initially hidden for "viewer" role */
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .post h5 {
+    color: #007bff;
+  }
+  
+  .post img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .post small {
+    color: #888;
+  }
+  

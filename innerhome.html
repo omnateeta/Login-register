@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Community Bulletin Board</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="innerhome.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">Real-Time Community Bulletin Board</h1>
+
+    <!-- User Role Simulation -->
+    <div class="mb-3">
+      <label for="userRole" class="form-label">Select Role:</label>
+      <select id="userRole" class="form-select">
+        <option value="admin">Admin</option>
+        <option value="standard">Standard User</option>
+        <option value="viewer">Viewer</option>
+      </select>
+    </div>
+
+    <!-- Tabs for Categories -->
+    <ul class="nav nav-tabs mb-4" id="categoryTabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-category="Events" href="#">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-category="News" href="#">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-category="Jobs" href="#">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-category="Others" href="#">Others</a>
+      </li>
+    </ul>
+
+    <!-- Create Post Section -->
+    <div id="createPostSection" class="bg-light p-4 rounded mb-4">
+      <h4>Create a Post</h4>
+      <form id="postForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="title" placeholder="Title" required>
+        </div>
+        <div class="mb-3">
+          <select class="form-select" id="category">
+            <option value="Events">Events</option>
+            <option value="News">News</option>
+            <option value="Jobs">Jobs</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="content" rows="3" placeholder="Write your post..." required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="attachment" class="form-label">Attach Image/File:</label>
+          <input class="form-control" type="file" id="attachment">
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
+    </div>
+
+    <!-- Posts Section -->
+    <div id="postsSection">
+      <h4 class="text-center">Posts</h4>
+      <div id="postsContainer" class="row g-4">
+        <!-- Dynamic Posts Will Be Rendered Here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
